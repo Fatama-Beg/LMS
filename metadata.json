@@ -1,0 +1,6 @@
+{
+  "name": "Educore",
+  "description": "Enterprise learning platform with Role-Based Access Control, instructor video management, interactive quizzes, and progress analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
