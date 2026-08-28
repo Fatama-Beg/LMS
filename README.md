@@ -1,100 +1,62 @@
-# 🎓 Educore — Fullstack Learning Management System (LMS)
+# Educore LMS - Fullstack Learning Management System
 
-A production-ready Fullstack LMS built with **React 19**, **TypeScript**, **Tailwind CSS**, and **Express REST API** with disk-persisted repository storage and zero external database configuration requirements.
+হ্যালো! এটি আমার তৈরি করা একটি ফুলস্ট্যাক লার্নিং ম্যানেজমেন্ট সিস্টেম (LMS) প্ল্যাটফর্ম। এখানে ৪টি ভিন্ন ভিন্ন রোলের (Student, Instructor, Content Manager, Admin) জন্য সম্পূর্ণ আলাদা ড্যাশবোর্ড ও ফিচার তৈরি করা হয়েছে। 
+
+সবগুলো কোড ফাইল খুব পরিষ্কারভাবে সাজানো হয়েছে এবং কোডের ভেতরে বাংলায় সহজ ভাষায় কমেন্ট দেওয়া আছে যাতে যে কেউ কোডটি সহজে বুঝতে পারে।
 
 ---
 
-## 🚀 How to Run (কোর্স প্ল্যাটফর্ম রান করার নির্দেশিকা)
+## 🎯 প্রজেক্টের প্রধান ফিচারসমূহ
 
-You can run this project in **two ways**:
+1. **মাল্টি-রোল অথেনটিকেশন (Multi-Role Authentication)**:
+   - **Student**: কোর্স ব্রাউজ ও এনরোল করা, ভিডিও ও টেক্সট লেসন দেখা, কুইজে অংশ নিয়ে তাত্ক্ষণিক রেজাল্ট পাওয়া।
+   - **Instructor**: নতুন কোর্স তৈরি করা, ভিডিও/টেক্সট লেসন যুক্ত করা, এমসিকিউ কুইজ তৈরি ও শিক্ষার্থীদের রেজাল্ট দেখা।
+   - **Content Manager**: প্ল্যাটফর্মের যেকোনো কোর্স রিভিউ/এডিট করা এবং ব্লগ আর্টিকেলের ড্রাফট ও পাবলিশ ম্যানেজ করা।
+   - **Admin**: সম্পূর্ণ সিস্টেম গভর্নেন্স, ব্যবহারকারীদের রোল পরিবর্তন (Promote/Demote), অডিট লগ চেক করা এবং অ্যানালিটিক্স দেখা।
 
-### Option 1: Run Fullstack All-in-One (সবকিছু একসাথে রান করা) — Recommended
-In your VS Code terminal, run:
+2. **সিকোয়েন্সিয়াল লেসন ও প্রগ্রেস ট্র্যাকার (Sequential Lessons & Progress Tracking)**:
+   - ছাত্রছাত্রীরা লেসনগুলো ধাপে ধাপে শেষ করতে পারে।
+   - "Mark as Complete" বাটনে ক্লিক করলে প্রগ্রেস স্বয়ংক্রিয়ভাবে আপডেট হয় (যেমন: ৩/৫ লেসন = ৬০%)।
+
+3. **অটো-গ্রেডিং কুইজ সিস্টেম (Auto-Grading Quiz)**:
+   - কুইজ সাবমিট করার সাথে সাথেই স্বয়ংক্রিয়ভাবে স্কোর হিসাব হয় এবং গ্রেডবুকে জমা থাকে।
+
+4. **ব্লগ পাবলিশিং সিএমএস (Blog CMS)**:
+   - ড্রাফট ও পাবলিশড মোড (শুধুমাত্র পাবলিশড ব্লগ সাধারণ পাঠকরা দেখতে পায়)।
+
+---
+
+## 💻 নিজের কম্পিউটারে প্রজেক্টটি রান করার নিয়ম
+
+আপনার কম্পিউটারে **Node.js** ইনস্টল থাকতে হবে।
+
+### ধাপ ১: প্যাকেজ ইনস্টল করা
+টার্মিনালে প্রজেক্ট ফোল্ডারে গিয়ে লিখুন:
 ```bash
 npm install
+```
+
+### ধাপ ২: লোকাল সার্ভার চালু করা
+সবকিছু একসাথে চালু করতে রান করুন:
+```bash
 npm run dev
 ```
-👉 Open your browser at: **`http://localhost:3000`**
+
+ব্রাউজারে ওপেন করুন: **`http://localhost:3000`**
 
 ---
 
-### Option 2: Run Frontend & Backend Separately (ফ্রন্টএন্ড ও ব্যাকএন্ড আলাদাভাবে রান করা)
+## 📂 কোড ফাইলের পরিচিতি
 
-#### Step 1: Start the Backend Server (টার্মিনাল ১: ব্যাকএন্ড রান)
-Open a new terminal in VS Code and run:
-```bash
-npm run server
-```
-*Or double click on `run-backend.bat` (Windows) / run `./run-backend.sh` (Mac/Linux).*  
-👉 Backend API will be active on **`http://localhost:3000`**.
-
-#### Step 2: Start the Frontend Server (টার্মিনাল ২: ফ্রন্টএন্ড রান)
-Open a second terminal in VS Code and run:
-```bash
-npm run client
-```
-*Or double click on `run-frontend.bat` (Windows) / run `./run-frontend.sh` (Mac/Linux).*  
-👉 Frontend UI will start on **`http://localhost:5173`** and automatically proxy all API requests to the backend!
+- `src/views/` - মূল স্ক্রিনগুলো (Auth, Catalog, Lesson, Quiz, Studio, Blog, Admin, Profile)
+- `src/components/` - পুনঃব্যবহারযোগ্য ছোট কম্পোনেন্টগুলো (Navbar, Modals, Session)
+- `src/context/AuthContext.tsx` - ব্যবহারকারীর লগইন স্টেট ও পারমিশন কন্ট্রোল
+- `src/services/api.ts` - ব্যাকএন্ডের সাথে যোগাযোগ করার API ক্লায়েন্ট
+- `src/types.ts` - সব ডেটা স্ট্রাকচার ও ইন্টারফেস
+- `server.ts` - এক্সপ্রেস ব্যাকএন্ড REST API সার্ভার
+- `server/repositories/database.ts` - ডেটা সেভ ও রিড করার ডেটাবেস রিপোজিটরি
 
 ---
 
-## 🔑 User Authentication & Role Portals (ভূমিকা অনুযায়ী প্রবেশ)
-
-Upon launching the app, you will see a dedicated **Authentication Gateway** where you can:
-1. **১-ক্লিক রোল লগইন (1-Click Instant Role Portals)**:
-   - 👑 **Admin**: `admin@lms.com` ➔ Direct access to **Admin Governance & Audit Dashboard**
-   - 🎓 **Instructor**: `instructor@lms.com` ➔ Direct access to **Course Studio & Quiz Creator**
-   - 📝 **Content Manager**: `content@lms.com` ➔ Direct access to **Course Review & Blog CMS**
-   - 🎒 **Student**: `student@lms.com` ➔ Direct access to **Course Catalog & Enrolled Lessons**
-2. **ইমেইল লগইন (Email Login)**: Enter your registered email and select session timeout duration.
-3. **নতুন একাউন্ট (Register New Account)**: Create a new account with your chosen role (Student, Instructor, Content Manager, Admin) and automatically enter that role's dashboard.
-
----
-
-## 🛠️ Project Structure
-
-```
-├── src/
-│   ├── components/         # Reusable UI components (Navbar, Modals, Session, Export)
-│   ├── context/            # React Context (AuthContext with session control)
-│   ├── services/           # Frontend API client (services/api.ts)
-│   ├── views/              # Main App views (AuthView, Catalog, Lesson Player, Studio, Blog, Admin, Profile)
-│   ├── types.ts            # Core TypeScript interfaces (User, Course, Quiz, Progress, Blog)
-│   ├── App.tsx             # Main routing and role-based viewport switcher
-│   ├── main.tsx            # React application entry point
-│   └── index.css           # Global Tailwind CSS stylesheet
-│
-├── server/
-│   ├── middleware/         # RBAC policy guards & token validation
-│   ├── repositories/       # Database repository with disk persistence
-│   ├── services/           # Auto-grading, progress calculation, blog services
-│   └── types.ts            # Server-side TypeScript interfaces
-│
-├── data/
-│   └── lms-store.json      # Persistent JSON data store (courses, progress, submissions)
-│
-├── run-frontend.bat        # Windows 1-click frontend launcher
-├── run-backend.bat         # Windows 1-click backend launcher
-├── run-fullstack.bat       # Windows 1-click fullstack launcher
-├── run-frontend.sh         # Linux/Mac frontend launcher
-├── run-backend.sh          # Linux/Mac backend launcher
-├── run-fullstack.sh        # Linux/Mac fullstack launcher
-├── server.ts               # Express REST API backend server & Vite integration
-├── package.json            # Scripts & dependencies
-├── tsconfig.json           # TypeScript configuration
-└── vite.config.ts          # Vite frontend configuration with API proxy
-```
-
----
-
-## 📦 Production Build & Deployment
-
-To build the self-contained production bundle:
-```bash
-npm run build
-```
-
-To run the production server:
-```bash
-npm run start
-```
+## 📝 তৈরি করেছেন
+একটি আধুনিক, ক্লিন এবং শিক্ষার্থীবান্ধব প্ল্যাটফর্ম তৈরি করার উদ্দেশ্যে কোডটি লেখা হয়েছে। কোনো সমস্যা বা প্রশ্ন থাকলে কোডের ভেতরের বাংলা কমেন্টগুলো দেখতে পারেন।
