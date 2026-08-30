@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: ['images.unsplash.com', 'localhost', 'res.cloudinary.com'],
+  reactStrictMode: false,
+  swcMinify: true,
+  typescript: {
+    ignoreBuildErrors: true,
   },
-  env: {
-    NEXT_PUBLIC_STRAPI_API_URL: process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337',
-  }
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;

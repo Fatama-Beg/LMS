@@ -113,7 +113,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const refreshUser = useCallback(async () => {
     try {
       setIsLoading(true);
-      const storedToken = localStorage.getItem('educore_session_token') || localStorage.getItem('lms_active_user_id');
+      const storedToken = typeof window !== 'undefined' ? (localStorage.getItem('educore_session_token') || localStorage.getItem('lms_active_user_id')) : null;
       if (!storedToken) {
         setCurrentUser(null);
         setCurrentSession(null);

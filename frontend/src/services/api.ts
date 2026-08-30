@@ -15,17 +15,19 @@
 
 import { User, Course, Lesson, Quiz, QuizSubmission, Enrollment, StudentCourseProgress, BlogPost, PlatformStats, AuditLog, UserSession } from '../types';
 
-let currentSessionToken: string = localStorage.getItem('educore_session_token') || '';
-let currentUserId: string = localStorage.getItem('lms_active_user_id') || '';
+let currentSessionToken: string = typeof window !== 'undefined' ? (localStorage.getItem('educore_session_token') || '') : '';
+let currentUserId: string = typeof window !== 'undefined' ? (localStorage.getItem('lms_active_user_id') || '') : '';
 
 // 🇧🇩 সেশন টোকেন সেট করার মেথড
 export function setActiveUserToken(tokenOrId: string) {
-  if (tokenOrId.startsWith('sess_')) {
-    currentSessionToken = tokenOrId;
-    localStorage.setItem('educore_session_token', tokenOrId);
-  } else {
-    currentUserId = tokenOrId;
-    localStorage.setItem('lms_active_user_id', tokenOrId);
+  if (typeof window !== 'undefined') {
+    if (tokenOrId.startsWith('sess_')) {
+      currentSessionToken = tokenOrId;
+      localStorage.setItem('educore_session_token', tokenOrId);
+    } else {
+      currentUserId = tokenOrId;
+      localStorage.setItem('lms_active_user_id', tokenOrId);
+    }
   }
 }
 
@@ -33,8 +35,10 @@ export function setActiveUserToken(tokenOrId: string) {
 export function clearActiveSession() {
   currentSessionToken = '';
   currentUserId = '';
-  localStorage.removeItem('educore_session_token');
-  localStorage.removeItem('lms_active_user_id');
+  if (typeof window !== 'undefined') {
+    localStorage.removeItem('educore_session_token');
+    localStorage.removeItem('lms_active_user_id');
+  }
 }
 
 export function getActiveUserToken(): string {
