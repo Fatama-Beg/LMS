@@ -41,8 +41,26 @@ export function getActiveUserToken(): string {
   return currentSessionToken || currentUserId;
 }
 
+function formatApiUrl(url?: string): string {
+  if (!url || typeof url !== 'string') return '';
+  let clean = url.trim();
+  if (!clean) return '';
+  if (!/^https?:\/\//i.test(clean)) {
+    clean = `https://${clean}`;
+  }
+  return clean.replace(/\/$/, '');
+}
+
+const RAW_API_URL = typeof window !== 'undefined'
+  ? ((import.meta as any).env?.VITE_API_URL || (import.meta as any).env?.NEXT_PUBLIC_STRAPI_API_URL || (process as any).env?.NEXT_PUBLIC_STRAPI_API_URL || '')
+  : (process.env.NEXT_PUBLIC_STRAPI_API_URL || '');
+
+const API_BASE_URL = formatApiUrl(RAW_API_URL);
+
 // 🇧🇩 সার্বজনীন ফেচ রিকোয়েস্ট র‍্যাপার
 async function request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+  const cleanEndpoint = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+  const url = API_BASE_URL ? `${API_BASE_URL}${cleanEndpoint}` : endpoint;
   const headers = new Headers(options.headers || {});
   headers.set('Content-Type', 'application/json');
   
@@ -55,15 +73,21 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
     }
   }
 
-  const response = await fetch(endpoint, {
+  const response = await fetch(url, {
     ...options,
     headers,
   });
 
-  const data = await response.json();
+  let data: any = {};
+  try {
+    data = await response.json();
+  } catch {
+    const text = await response.text().catch(() => '');
+    data = { message: text || `HTTP ${response.status} ${response.statusText}` };
+  }
 
   if (!response.ok) {
-    const errorMsg = data.error || data.message || `HTTP Error ${response.status}`;
+    const errorMsg = data.error?.message || data.error || data.message || `HTTP Error ${response.status}`;
     const error: any = new Error(errorMsg);
     error.status = response.status;
     error.code = data.code;

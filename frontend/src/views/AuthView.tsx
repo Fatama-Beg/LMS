@@ -184,87 +184,135 @@ export const AuthView: React.FC<AuthViewProps> = ({ onSuccess }) => {
         {/* Form Body */}
         {activeTab === 'login' ? (
           /* Sign In Form */
-          <form onSubmit={handleLogin} className="space-y-4 text-xs">
+          <div className="space-y-4 text-xs">
+            {/* Quick Demo User Selector */}
             <div>
-              <label className="font-semibold text-slate-700 block mb-1.5">
-                Email Address
+              <label className="font-semibold text-slate-700 block mb-2 text-[11px] uppercase tracking-wider">
+                Quick Demo Sign In
               </label>
-              <div className="relative">
-                <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
-                <input
-                  type="email"
-                  required
-                  value={loginEmail}
-                  onChange={e => setLoginEmail(e.target.value)}
-                  placeholder="name@example.com"
-                  className="w-full pl-10 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 transition-all outline-none"
-                />
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { role: 'student', label: '🎓 Student', email: 'student@lms.com' },
+                  { role: 'instructor', label: '👨‍🏫 Instructor', email: 'instructor@lms.com' },
+                  { role: 'admin', label: '🛡️ Admin', email: 'admin@lms.com' },
+                  { role: 'content_manager', label: '✍️ Content Mgr', email: 'content@lms.com' },
+                ].map(demo => (
+                  <button
+                    key={demo.role}
+                    type="button"
+                    disabled={isLoading}
+                    onClick={async () => {
+                      setLoginEmail(demo.email);
+                      setLoginPassword('password123');
+                      setIsLoading(true);
+                      try {
+                        const success = await loginWithEmail(demo.email, 1440);
+                        if (success) {
+                          onSuccess(demo.role as UserRole);
+                        }
+                      } catch (err: any) {
+                        setError(err?.message || 'Login failed');
+                      } finally {
+                        setIsLoading(false);
+                      }
+                    }}
+                    className="p-2 rounded-xl border border-slate-200 bg-slate-50/80 hover:bg-indigo-50/80 hover:border-indigo-200 text-slate-800 hover:text-indigo-700 font-medium text-left transition-all cursor-pointer flex items-center justify-between group text-[11px]"
+                  >
+                    <span>{demo.label}</span>
+                    <ArrowRight className="w-3 h-3 text-slate-400 group-hover:text-indigo-600 transition-transform group-hover:translate-x-0.5" />
+                  </button>
+                ))}
               </div>
             </div>
 
-            <div>
-              <div className="flex items-center justify-between mb-1.5">
-                <label className="font-semibold text-slate-700 block">
-                  Password
+            <div className="relative flex py-1 items-center">
+              <div className="flex-grow border-t border-slate-200"></div>
+              <span className="flex-shrink mx-2 text-slate-400 text-[10px] uppercase font-semibold">Or use credentials</span>
+              <div className="flex-grow border-t border-slate-200"></div>
+            </div>
+
+            <form onSubmit={handleLogin} className="space-y-3.5">
+              <div>
+                <label className="font-semibold text-slate-700 block mb-1">
+                  Email Address
                 </label>
+                <div className="relative">
+                  <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-2.5" />
+                  <input
+                    type="email"
+                    required
+                    value={loginEmail}
+                    onChange={e => setLoginEmail(e.target.value)}
+                    placeholder="name@example.com"
+                    className="w-full pl-10 pr-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 transition-all outline-none"
+                  />
+                </div>
               </div>
-              <div className="relative">
-                <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
-                <input
-                  type={showPassword ? 'text' : 'password'}
-                  required
-                  value={loginPassword}
-                  onChange={e => setLoginPassword(e.target.value)}
-                  placeholder="••••••••"
-                  className="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 transition-all outline-none"
-                />
+
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <label className="font-semibold text-slate-700 block">
+                    Password
+                  </label>
+                </div>
+                <div className="relative">
+                  <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-2.5" />
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    required
+                    value={loginPassword}
+                    onChange={e => setLoginPassword(e.target.value)}
+                    placeholder="••••••••"
+                    className="w-full pl-10 pr-10 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 transition-all outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3.5 top-2.5 text-slate-400 hover:text-slate-600 cursor-pointer"
+                  >
+                    {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  </button>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between text-[11px] pt-0.5">
+                <label className="flex items-center gap-1.5 text-slate-600 cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    checked={rememberMe}
+                    onChange={e => setRememberMe(e.target.checked)}
+                    className="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <span>Remember me</span>
+                </label>
                 <button
                   type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3.5 top-3 text-slate-400 hover:text-slate-600 cursor-pointer"
+                  onClick={() => setSuccessMsg('Demo mode: you can log in with any password or select a quick demo profile above.')}
+                  className="text-indigo-600 hover:text-indigo-700 font-semibold cursor-pointer"
                 >
-                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  Forgot password?
                 </button>
               </div>
-            </div>
 
-            <div className="flex items-center justify-between text-xs pt-0.5">
-              <label className="flex items-center gap-2 text-slate-600 cursor-pointer select-none">
-                <input
-                  type="checkbox"
-                  checked={rememberMe}
-                  onChange={e => setRememberMe(e.target.checked)}
-                  className="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
-                />
-                <span>Remember me</span>
-              </label>
               <button
-                type="button"
-                onClick={() => setError('Password reset instructions have been simulated for this demo account.')}
-                className="text-indigo-600 hover:text-indigo-700 font-semibold cursor-pointer"
+                type="submit"
+                disabled={isLoading}
+                className="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] text-white font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm shadow-indigo-100 disabled:opacity-50 mt-2"
               >
-                Forgot password?
+                {isLoading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Signing in...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Sign In</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </>
+                )}
               </button>
-            </div>
-
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] text-white font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm shadow-indigo-100 disabled:opacity-50 mt-2"
-            >
-              {isLoading ? (
-                <>
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                  <span>Signing in...</span>
-                </>
-              ) : (
-                <>
-                  <span>Sign In</span>
-                  <ArrowRight className="w-4 h-4" />
-                </>
-              )}
-            </button>
-          </form>
+            </form>
+          </div>
         ) : (
           /* Create Account Form */
           <form onSubmit={handleRegister} className="space-y-3.5 text-xs">

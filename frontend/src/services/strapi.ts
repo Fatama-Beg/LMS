@@ -8,9 +8,21 @@
 
 import { Course, Lesson, Quiz, QuizSubmission, BlogPost, User } from '../types';
 
-const STRAPI_BASE_URL = typeof window !== 'undefined' 
-  ? ((import.meta as any).env?.VITE_STRAPI_API_URL || 'http://localhost:1337')
-  : 'http://localhost:1337';
+function formatApiUrl(url?: string): string {
+  if (!url || typeof url !== 'string') return 'http://localhost:1337';
+  let clean = url.trim();
+  if (!clean) return 'http://localhost:1337';
+  if (!/^https?:\/\//i.test(clean)) {
+    clean = `https://${clean}`;
+  }
+  return clean.replace(/\/$/, '');
+}
+
+const RAW_STRAPI_URL = typeof window !== 'undefined' 
+  ? ((import.meta as any).env?.VITE_STRAPI_API_URL || (import.meta as any).env?.NEXT_PUBLIC_STRAPI_API_URL || (process as any).env?.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337')
+  : (process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337');
+
+const STRAPI_BASE_URL = formatApiUrl(RAW_STRAPI_URL);
 
 export async function fetchFromStrapi<T = any>(endpoint: string, options: RequestInit = {}): Promise<T> {
   const token = typeof window !== 'undefined' ? localStorage.getItem('strapi_jwt') : null;
