@@ -1,57 +1,97 @@
-# Educore LMS - Fullstack Learning Management System
+# LMS Platform - Next.js & Strapi
 
-হ্যালো! এটি আমার তৈরি করা একটি ফুলস্ট্যাক লার্নিং ম্যানেজমেন্ট সিস্টেম (LMS) প্ল্যাটফর্ম। এখানে ৪টি ভিন্ন ভিন্ন রোলের (Student, Instructor, Content Manager, Admin) জন্য সম্পূর্ণ আলাদা ড্যাশবোর্ড ও ফিচার তৈরি করা হয়েছে। 
+A full-stack Learning Management System built with Next.js (frontend) and Strapi (backend/CMS) according to the project specifications.
 
-##  প্রজেক্টের প্রধান ফিচারসমূহ
+## Overview & Architecture
 
-1. **মাল্টি-রোল অথেনটিকেশন (Multi-Role Authentication)**:
-   - **Student**: কোর্স ব্রাউজ ও এনরোল করা, ভিডিও ও টেক্সট লেসন দেখা, কুইজে অংশ নিয়ে তাত্ক্ষণিক রেজাল্ট পাওয়া।
-   - **Instructor**: নতুন কোর্স তৈরি করা, ভিডিও/টেক্সট লেসন যুক্ত করা, এমসিকিউ কুইজ তৈরি ও শিক্ষার্থীদের রেজাল্ট দেখা।
-   - **Content Manager**: প্ল্যাটফর্মের যেকোনো কোর্স রিভিউ/এডিট করা এবং ব্লগ আর্টিকেলের ড্রাফট ও পাবলিশ ম্যানেজ করা।
-   - **Admin**: সম্পূর্ণ সিস্টেম গভর্নেন্স, ব্যবহারকারীদের রোল পরিবর্তন (Promote/Demote), অডিট লগ চেক করা এবং অ্যানালিটিক্স দেখা।
+- **Frontend**: Next.js (React 18, Tailwind CSS, TypeScript, Lucide Icons), deployed on Vercel.
+- **Backend**: Strapi v4 headless CMS with Users & Permissions plugin, deployed on Railway.
+- **Database**: PostgreSQL (Railway) / SQLite (local dev).
 
-2. **সিকোয়েন্সিয়াল লেসন ও প্রগ্রেস ট্র্যাকার (Sequential Lessons & Progress Tracking)**:
-   - ছাত্রছাত্রীরা লেসনগুলো ধাপে ধাপে শেষ করতে পারে।
-   - "Mark as Complete" বাটনে ক্লিক করলে প্রগ্রেস স্বয়ংক্রিয়ভাবে আপডেট হয় (যেমন: ৩/৫ লেসন = ৬০%)।
+## Role-Based Access Control (RBAC)
 
-3. **অটো-গ্রেডিং কুইজ সিস্টেম (Auto-Grading Quiz)**:
-   - কুইজ সাবমিট করার সাথে সাথেই স্বয়ংক্রিয়ভাবে স্কোর হিসাব হয় এবং গ্রেডবুকে জমা থাকে।
+The system supports four distinct roles with strict permission boundaries enforced on the backend:
 
-4. **ব্লগ পাবলিশিং সিএমএস (Blog CMS)**:
-   - ড্রাফট ও পাবলিশড মোড (শুধুমাত্র পাবলিশড ব্লগ সাধারণ পাঠকরা দেখতে পায়)।
+| Action | Admin | Content Manager | Instructor | Student |
+|---|:---:|:---:|:---:|:---:|
+| Manage users & assign roles | Yes | No | No | No |
+| Create / edit / delete any course | Yes | Yes | Own only | No |
+| Add / edit / delete lessons | Yes | Yes | Own courses | No |
+| Create quizzes | Yes | Yes | Own courses | No |
+| View student progress | Yes | Yes | Own courses | Own only |
+| Write / manage blog posts | Yes | Yes | No | No |
+| Enroll in a course | No | No | No | Yes |
+| Take quizzes | No | No | No | Yes |
 
----
+## Core & Differentiator Features
 
-## প্রজেক্টটি রান করার নিয়ম
+1. **Authentication & RBAC**:
+   - Sign up / login for all four roles.
+   - Protected API routes and client-side guards with server-side validation.
 
-আপনার কম্পিউটারে **Node.js** ইনস্টল থাকতে হবে।
+2. **Course & Lesson Management**:
+   - Course creation with categories, difficulty levels, and cover images.
+   - Sequential lessons with support for video URLs and structured markdown content.
 
-### ধাপ ১: প্যাকেজ ইনস্টল করা
-টার্মিনালে প্রজেক্ট ফোল্ডারে গিয়ে লিখুন:
+3. **Student Experience**:
+   - Course browsing and enrollment.
+   - Separate "My Courses" section for enrolled courses.
+   - Sequential lesson viewer with progress calculation.
+
+4. **Progress Tracking**:
+   - Mark lessons complete with automatic progress percentage computation (e.g., 3/5 lessons = 60%).
+   - Persistent per-student, per-course progress stored in the database.
+
+5. **Quiz with Auto-Grading**:
+   - Multiple-choice questions (MCQs) with points and passing criteria.
+   - Server-side auto-grading on submission with immediate score feedback.
+   - Past submission history and scores stored per user.
+
+6. **Blog Engine**:
+   - Content Managers and Admins can create, edit, and delete blog posts.
+   - Draft vs. Published states (drafts hidden from students and public).
+
+7. **Admin Dashboard**:
+   - User role management (promote/demote/reassign roles).
+   - Platform metrics (total users per role, courses, enrollments).
+
+## Local Development
+
+### 1. Frontend (Next.js)
+
 ```bash
+cd educore-lms-frontend
 npm install
 ```
 
-### ধাপ ২: লোকাল সার্ভার চালু করা
-সবকিছু একসাথে চালু করতে রান করুন:
+Create a `.env.local` file:
+```env
+NEXT_PUBLIC_STRAPI_API_URL=http://localhost:1337
+```
+
+Run the development server:
 ```bash
 npm run dev
 ```
+Visit `http://localhost:3000`.
 
-ব্রাউজারে ওপেন করুন: **`http://localhost:3000`**
+### 2. Backend (Strapi)
 
+```bash
+cd educore-lms-backend
+npm install
+npm run develop
+```
+Access the Strapi admin dashboard at `http://localhost:1337/admin`.
 
+## Deployment
 
-##  কোড ফাইলের পরিচিতি
+- **Frontend (Vercel)**: Import `educore-lms-frontend` repository, set `NEXT_PUBLIC_STRAPI_API_URL` environment variable, and trigger build.
+- **Backend (Railway)**: Deploy `educore-lms-backend` repository with a PostgreSQL plugin.
 
-- `src/views/` - মূল স্ক্রিনগুলো (Auth, Catalog, Lesson, Quiz, Studio, Blog, Admin, Profile)
-- `src/components/` - পুনঃব্যবহারযোগ্য ছোট কম্পোনেন্টগুলো (Navbar, Modals, Session)
-- `src/context/AuthContext.tsx` - ব্যবহারকারীর লগইন স্টেট ও পারমিশন কন্ট্রোল
-- `src/services/api.ts` - ব্যাকএন্ডের সাথে যোগাযোগ করার API ক্লায়েন্ট
-- `src/types.ts` - সব ডেটা স্ট্রাকচার ও ইন্টারফেস
-- `server.ts` - এক্সপ্রেস ব্যাকএন্ড REST API সার্ভার
-- `server/repositories/database.ts` - ডেটা সেভ ও রিড করার ডেটাবেস রিপোজিটরি
+## Demo Accounts
 
-
-
-
+- **Admin**: `admin@lms.com` (Password: `admin123`)
+- **Content Manager**: `content@lms.com` (Password: `content123`)
+- **Instructor**: `instructor@lms.com` (Password: `instructor123`)
+- **Student**: `student@lms.com` (Password: `student123`)

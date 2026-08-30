@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enrollments",
+  "info": {
+    "singularName": "enrollment",
+    "pluralName": "enrollments",
+    "displayName": "Enrollment"
+  },
+  "attributes": {
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "completedLessons": { "type": "json" },
+    "progressPercentage": { "type": "integer", "default": 0 },
+    "isCompleted": { "type": "boolean", "default": false },
+    "enrolledAt": { "type": "datetime" }
+  }
+}

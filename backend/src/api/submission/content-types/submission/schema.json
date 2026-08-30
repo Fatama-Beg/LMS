@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "submissions",
+  "info": {
+    "singularName": "submission",
+    "pluralName": "submissions",
+    "displayName": "Quiz Submission"
+  },
+  "attributes": {
+    "quiz": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::quiz.quiz"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "score": { "type": "integer", "required": true },
+    "totalPoints": { "type": "integer", "required": true },
+    "percentage": { "type": "integer", "required": true },
+    "isPassed": { "type": "boolean", "required": true },
+    "answers": { "type": "json" },
+    "submittedAt": { "type": "datetime" }
+  }
+}

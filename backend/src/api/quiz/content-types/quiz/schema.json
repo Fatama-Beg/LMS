@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quizzes",
+  "info": {
+    "singularName": "quiz",
+    "pluralName": "quizzes",
+    "displayName": "Quiz"
+  },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "passingScore": { "type": "integer", "default": 70 },
+    "timeLimitMinutes": { "type": "integer", "default": 15 },
+    "questions": { "type": "json", "required": true },
+    "course": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::course.course"
+    }
+  }
+}

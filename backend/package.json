@@ -1,0 +1,24 @@
+{
+  "name": "educore-lms-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Educore LMS - Strapi Headless CMS Engine",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/strapi": "4.25.8",
+    "@strapi/plugin-users-permissions": "4.25.8",
+    "@strapi/plugin-i18n": "4.25.8",
+    "better-sqlite3": "8.6.0",
+    "pg": "^8.12.0"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
