@@ -1,0 +1,1114 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_01",
+      "name": "Tanvir Ahmed (Admin)",
+      "email": "admin@lms.com",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "headline": "System Administrator & Enterprise Cloud Architect",
+      "phone": "+880 1712-345678",
+      "location": "Dhaka, Bangladesh",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "website": "https://educore.io",
+      "interests": [
+        "Cloud Architecture",
+        "RBAC Security",
+        "TypeScript",
+        "DevOps"
+      ],
+      "notifications": {
+        "emailAnnouncements": true,
+        "quizReminders": true,
+        "newCourseAlerts": true
+      },
+      "bio": "Platform Administrator with superuser privileges across system and role assignments.",
+      "createdAt": "2026-08-01T00:00:00.000Z"
+    },
+    {
+      "id": "usr_cm_01",
+      "name": "Farhana Rahman (Content Manager)",
+      "email": "content@lms.com",
+      "role": "content_manager",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
+      "headline": "Curriculum Director & Senior Technical Editor",
+      "phone": "+880 1819-456789",
+      "location": "Chittagong, Bangladesh",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "website": "https://farhana-rahman.dev",
+      "interests": [
+        "Curriculum Design",
+        "Instructional Tech",
+        "Content Strategy"
+      ],
+      "notifications": {
+        "emailAnnouncements": true,
+        "quizReminders": true,
+        "newCourseAlerts": true
+      },
+      "bio": "Curriculum architect and blog editor managing all platform courses and publications.",
+      "createdAt": "2026-08-05T00:00:00.000Z"
+    },
+    {
+      "id": "usr_inst_01",
+      "name": "Dr. Rafiqul Islam (Instructor)",
+      "email": "instructor@lms.com",
+      "role": "instructor",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "headline": "Professor of Computer Science & Fullstack Architect",
+      "phone": "+880 1911-889900",
+      "location": "Dhaka, Bangladesh",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "website": "https://dr-rafiqul.edu",
+      "interests": [
+        "Distributed Systems",
+        "TypeScript",
+        "Clean Architecture",
+        "Algorithms"
+      ],
+      "notifications": {
+        "emailAnnouncements": true,
+        "quizReminders": true,
+        "newCourseAlerts": true
+      },
+      "bio": "Senior Fullstack Software Architect specializing in TypeScript, Next.js & System Design.",
+      "createdAt": "2026-08-10T00:00:00.000Z"
+    },
+    {
+      "id": "usr_inst_02",
+      "name": "Nusrat Jahan (Instructor)",
+      "email": "nusrat@lms.com",
+      "role": "instructor",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "headline": "DevOps Specialist & Quality Assurance Lead",
+      "phone": "+880 1612-554433",
+      "location": "Sylhet, Bangladesh",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "website": "https://nusratjahan.io",
+      "interests": [
+        "Docker",
+        "CI/CD Pipelines",
+        "Cloud Infrastructure",
+        "Automation"
+      ],
+      "notifications": {
+        "emailAnnouncements": true,
+        "quizReminders": true,
+        "newCourseAlerts": true
+      },
+      "bio": "Cloud Architect & DevOps Specialist with focus on Strapi, Docker and Railway deployment.",
+      "createdAt": "2026-08-12T00:00:00.000Z"
+    },
+    {
+      "id": "usr_stud_01",
+      "name": "Shakib Al Hasan (Student)",
+      "email": "student@lms.com",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "headline": "Software Engineering Major | Fullstack Aspirant",
+      "phone": "+880 1711-223344",
+      "location": "Dhaka, Bangladesh",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "website": "https://shakibalhasan.dev",
+      "interests": [
+        "React",
+        "Next.js",
+        "Physics",
+        "Circuits",
+        "Data Structures"
+      ],
+      "notifications": {
+        "emailAnnouncements": true,
+        "quizReminders": true,
+        "newCourseAlerts": true
+      },
+      "bio": "Aspiring Software Engineer taking fullstack web development and distributed systems.",
+      "createdAt": "2026-08-15T00:00:00.000Z",
+      "enrolledCourseIds": [
+        "crs_physics_01",
+        "crs_fullstack_06",
+        "crs_programming_05"
+      ]
+    },
+    {
+      "id": "usr_stud_02",
+      "name": "Amina Khatun (Student)",
+      "email": "amina@lms.com",
+      "role": "student",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+      "headline": "UI/UX Designer & Frontend Developer",
+      "phone": "+880 1515-998877",
+      "location": "Rajshahi, Bangladesh",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "website": "https://aminakhatun.design",
+      "interests": [
+        "UI/UX",
+        "Tailwind CSS",
+        "Mathematics",
+        "Digital ICT"
+      ],
+      "notifications": {
+        "emailAnnouncements": true,
+        "quizReminders": true,
+        "newCourseAlerts": true
+      },
+      "bio": "Frontend enthusiast exploring React design patterns and TypeScript architectures.",
+      "createdAt": "2026-08-18T00:00:00.000Z",
+      "enrolledCourseIds": [
+        "crs_math_03",
+        "crs_ict_04"
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "id": "crs_physics_01",
+      "title": "Physics: Classical Mechanics, Waves & Modern Quantum Theory",
+      "slug": "physics-classical-mechanics-waves-quantum",
+      "description": "Comprehensive study of Newtonian kinematics, rotational dynamics, harmonic oscillations, electromagnetic waves, and introductory quantum mechanics.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=600&auto=format&fit=crop&q=80",
+      "category": "Pure & Applied Sciences",
+      "level": "Intermediate",
+      "instructorId": "usr_inst_01",
+      "instructorName": "Dr. Rafiqul Islam",
+      "instructorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "lessonsCount": 3,
+      "totalDurationMinutes": 85,
+      "isPublished": true,
+      "createdAt": "2026-08-15T10:00:00.000Z",
+      "updatedAt": "2026-08-20T10:00:00.000Z",
+      "tags": [
+        "Physics",
+        "Mechanics",
+        "Waves",
+        "Quantum",
+        "Thermodynamics"
+      ]
+    },
+    {
+      "id": "crs_chemistry_02",
+      "title": "Chemistry: Organic Synthesis, Chemical Bonding & Kinetics",
+      "slug": "chemistry-organic-synthesis-bonding-kinetics",
+      "description": "Master organic reaction mechanisms, atomic orbitals, chemical thermodynamics, stoichiometry, equilibrium constants, and spectroscopy.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&auto=format&fit=crop&q=80",
+      "category": "Pure & Applied Sciences",
+      "level": "Intermediate",
+      "instructorId": "usr_cm_01",
+      "instructorName": "Farhana Rahman",
+      "instructorAvatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
+      "lessonsCount": 3,
+      "totalDurationMinutes": 90,
+      "isPublished": true,
+      "createdAt": "2026-08-16T10:00:00.000Z",
+      "updatedAt": "2026-08-21T10:00:00.000Z",
+      "tags": [
+        "Chemistry",
+        "Organic",
+        "Bonding",
+        "Kinetics",
+        "Equilibrium"
+      ]
+    },
+    {
+      "id": "crs_math_03",
+      "title": "Math: Multivariable Calculus, Linear Algebra & Discrete Structures",
+      "slug": "math-multivariable-calculus-linear-algebra",
+      "description": "Rigorous mathematical foundations: partial derivatives, vector spaces, matrix eigenvalues, combinatorics, proof methods, and graph theory.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&auto=format&fit=crop&q=80",
+      "category": "Mathematical Sciences",
+      "level": "Advanced",
+      "instructorId": "usr_inst_01",
+      "instructorName": "Dr. Rafiqul Islam",
+      "instructorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "lessonsCount": 3,
+      "totalDurationMinutes": 95,
+      "isPublished": true,
+      "createdAt": "2026-08-17T10:00:00.000Z",
+      "updatedAt": "2026-08-22T10:00:00.000Z",
+      "tags": [
+        "Calculus",
+        "Linear Algebra",
+        "Discrete Math",
+        "Vectors"
+      ]
+    },
+    {
+      "id": "crs_ict_04",
+      "title": "ICT: Information & Communication Technology in the Digital Age",
+      "slug": "ict-information-communication-technology",
+      "description": "Foundations of computer systems, digital networking, cybersecurity protocols, cloud infrastructure, relational databases, and internet ethics.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop&q=80",
+      "category": "Information Technology",
+      "level": "Beginner",
+      "instructorId": "usr_inst_02",
+      "instructorName": "Nusrat Jahan",
+      "instructorAvatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "lessonsCount": 3,
+      "totalDurationMinutes": 75,
+      "isPublished": true,
+      "createdAt": "2026-08-18T10:00:00.000Z",
+      "updatedAt": "2026-08-22T10:00:00.000Z",
+      "tags": [
+        "ICT",
+        "Networking",
+        "Cybersecurity",
+        "Database",
+        "Cloud"
+      ]
+    },
+    {
+      "id": "crs_programming_05",
+      "title": "Programming: C++, Python & Algorithmic Problem Solving",
+      "slug": "programming-cpp-python-problem-solving",
+      "description": "Hands-on programming mastery: memory management, pointers, object-oriented programming (OOP), recursion, data structures, and algorithmic complexity.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&auto=format&fit=crop&q=80",
+      "category": "Computer Science",
+      "level": "Beginner",
+      "instructorId": "usr_inst_01",
+      "instructorName": "Dr. Rafiqul Islam",
+      "instructorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "lessonsCount": 3,
+      "totalDurationMinutes": 105,
+      "isPublished": true,
+      "createdAt": "2026-08-19T10:00:00.000Z",
+      "updatedAt": "2026-08-23T10:00:00.000Z",
+      "tags": [
+        "C++",
+        "Python",
+        "Algorithms",
+        "Data Structures",
+        "OOP"
+      ]
+    },
+    {
+      "id": "crs_fullstack_06",
+      "title": "Full Stack Development: Modern React, Next.js, Node.js & APIs",
+      "slug": "full-stack-development-react-nextjs-nodejs",
+      "description": "Build enterprise end-to-end applications with Next.js App Router, Server Actions, TypeScript, Tailwind CSS, PostgreSQL, and scalable microservices.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop&q=80",
+      "category": "Software Engineering",
+      "level": "Intermediate",
+      "instructorId": "usr_inst_01",
+      "instructorName": "Dr. Rafiqul Islam",
+      "instructorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "lessonsCount": 3,
+      "totalDurationMinutes": 120,
+      "isPublished": true,
+      "createdAt": "2026-08-20T10:00:00.000Z",
+      "updatedAt": "2026-08-24T10:00:00.000Z",
+      "tags": [
+        "Full Stack",
+        "Next.js",
+        "React",
+        "Node.js",
+        "TypeScript",
+        "REST API"
+      ]
+    },
+    {
+      "id": "crs_design_patterns_07",
+      "title": "Design Patterns & Clean Software Architecture",
+      "slug": "design-patterns-clean-software-architecture",
+      "description": "Master GoF Creational, Structural, Behavioral patterns, SOLID principles, Repository Pattern, Dependency Injection, and domain-driven design in TypeScript.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1516116211227-bbc1543b5936?w=600&auto=format&fit=crop&q=80",
+      "category": "Software Architecture",
+      "level": "Intermediate",
+      "instructorId": "usr_inst_01",
+      "instructorName": "Dr. Rafiqul Islam",
+      "instructorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "lessonsCount": 3,
+      "totalDurationMinutes": 85,
+      "isPublished": true,
+      "createdAt": "2026-08-21T10:00:00.000Z",
+      "updatedAt": "2026-08-24T10:00:00.000Z",
+      "tags": [
+        "Design Patterns",
+        "Architecture",
+        "SOLID",
+        "Clean Code",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": "crs_software_metrics_08",
+      "title": "Software Metrics & Quality Assurance Engineering",
+      "slug": "software-metrics-quality-assurance",
+      "description": "Quantify software health: Cyclomatic Complexity, Code Coverage, Halstead metrics, Technical Debt analysis, Automated Unit Testing, and CI/CD Quality Gates.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80",
+      "category": "Software Engineering",
+      "level": "Advanced",
+      "instructorId": "usr_inst_02",
+      "instructorName": "Nusrat Jahan",
+      "instructorAvatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "lessonsCount": 3,
+      "totalDurationMinutes": 90,
+      "isPublished": true,
+      "createdAt": "2026-08-22T10:00:00.000Z",
+      "updatedAt": "2026-08-24T10:00:00.000Z",
+      "tags": [
+        "Software Metrics",
+        "QA",
+        "Cyclomatic Complexity",
+        "Testing",
+        "CI/CD"
+      ]
+    },
+    {
+      "id": "crs_electronics_09",
+      "title": "Electronics: Semiconductors, Transistor Circuits & Op-Amps",
+      "slug": "electronics-semiconductors-transistors-opamps",
+      "description": "Solid-state electronics: PN junction physics, BJT and MOSFET biasing, small-signal AC amplifiers, operational amplifiers (Op-Amps), and active filters.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=600&auto=format&fit=crop&q=80",
+      "category": "Electrical & Hardware",
+      "level": "Intermediate",
+      "instructorId": "usr_admin_01",
+      "instructorName": "Tanvir Ahmed",
+      "instructorAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "lessonsCount": 3,
+      "totalDurationMinutes": 80,
+      "isPublished": true,
+      "createdAt": "2026-08-23T10:00:00.000Z",
+      "updatedAt": "2026-08-25T10:00:00.000Z",
+      "tags": [
+        "Electronics",
+        "Semiconductors",
+        "Transistors",
+        "Op-Amps",
+        "Analog"
+      ]
+    },
+    {
+      "id": "crs_circuits_10",
+      "title": "Circuits: Electric Network Analysis & AC/DC Theory",
+      "slug": "circuits-electric-network-analysis-ac-dc",
+      "description": "Fundamental circuit laws: Ohm’s Law, Kirchhoff’s Current/Voltage Laws (KCL/KVL), Thevenin/Norton theorems, mesh/nodal analysis, and RLC resonance.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=80",
+      "category": "Electrical & Hardware",
+      "level": "Beginner",
+      "instructorId": "usr_admin_01",
+      "instructorName": "Tanvir Ahmed",
+      "instructorAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "lessonsCount": 3,
+      "totalDurationMinutes": 75,
+      "isPublished": true,
+      "createdAt": "2026-08-24T10:00:00.000Z",
+      "updatedAt": "2026-08-25T10:00:00.000Z",
+      "tags": [
+        "Circuits",
+        "Ohm Law",
+        "Kirchhoff",
+        "AC/DC",
+        "RLC",
+        "Network Analysis"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lsn_phy_01",
+      "courseId": "crs_physics_01",
+      "title": "1. Newtonian Mechanics & Rotational Dynamics",
+      "description": "Understand kinematics, Newton’s laws of motion, work-energy theorem, and conservation of angular momentum.",
+      "contentType": "video",
+      "videoUrl": "https://www.youtube.com/embed/ZjAqacIC_3c",
+      "content": "## Classical Mechanics & Equations of Motion\nNewtonian mechanics describes the motion of macroscopic objects under the influence of force fields.\n\n### Key Equations:\n1. **Newton's Second Law**: $\\vec{F} = m \\vec{a} = \\frac{d\\vec{p}}{dt}$\n2. **Work-Energy Theorem**: $W_{net} = \\Delta K = \\frac{1}{2} m v_f^2 - \\frac{1}{2} m v_i^2$\n3. **Torque and Angular Momentum**: $\\vec{\\tau} = \\vec{r} \\times \\vec{F} = I \\vec{\\alpha}$\n\n```plaintext\n🇧🇩 বাংলা নোট (Bangla Concept):\nবস্তুর ভরবেগ পরিবর্তনের হার তার উপর প্রযুক্ত বলের সমানুপাতিক এবং বল যেদিকে ক্রিয়া করে ভরবেগের পরিবর্তনও সেদিকে ঘটে।\n```\n",
+      "order": 1,
+      "durationMinutes": 25,
+      "resources": [
+        {
+          "title": "Mechanics Formula Sheet",
+          "url": "https://ocw.mit.edu"
+        }
+      ]
+    },
+    {
+      "id": "lsn_phy_02",
+      "courseId": "crs_physics_01",
+      "title": "2. Oscillations, Harmonic Motion & Wave Optics",
+      "description": "Simple harmonic motion (SHM), wave equations, superposition, interference, and diffraction phenomena.",
+      "contentType": "text",
+      "videoUrl": "",
+      "content": "## Wave Propagation & Simple Harmonic Motion\nSHM is governed by linear restoring forces: $F = -kx$.\n\n### Wave Properties:\n- **Wave Velocity**: $v = f \\lambda$\n- **Constructive Interference**: Path difference $\\Delta x = n \\lambda$\n- **Destructive Interference**: Path difference $\\Delta x = (n + \\frac{1}{2}) \\lambda$\n",
+      "order": 2,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_phy_03",
+      "courseId": "crs_physics_01",
+      "title": "3. Introduction to Quantum Theory & Photoelectric Effect",
+      "description": "Wave-particle duality, Planck’s quantum hypothesis, Einstein’s photoelectric equation, and de Broglie wavelengths.",
+      "contentType": "markdown",
+      "videoUrl": "",
+      "content": "## Quantum Foundations\nMax Planck postulated that energy is quantized: $E = h\\nu$.\n\n### Einstein's Photoelectric Equation:\n$$E_k^{max} = h\\nu - \\Phi$$\n\nWhere $\\Phi$ is the material work function and $h$ is Planck's constant ($6.626 \\times 10^{-34} \\text{ J}\\cdot\\text{s}$).\n",
+      "order": 3,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_chem_01",
+      "courseId": "crs_chemistry_02",
+      "title": "1. Chemical Bonding, Hybridization & Molecular Geometry",
+      "description": "VSEPR theory, sp/sp2/sp3 hybridization, molecular orbital diagrams, and polarity.",
+      "contentType": "video",
+      "videoUrl": "https://www.youtube.com/embed/ZjAqacIC_3c",
+      "content": "## Molecular Geometry & Hybridization\nCovalent bonds form through orbital overlap. Hybridization explains directional bonding in hydrocarbons and complexes.\n\n### Hybridization Table:\n- **$sp^3$**: Tetrahedral geometry (109.5° bond angle) e.g., $CH_4$\n- **$sp^2$**: Trigonal planar (120° bond angle) e.g., $C_2H_4$\n- **$sp$**: Linear (180° bond angle) e.g., $C_2H_2$\n",
+      "order": 1,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_chem_02",
+      "courseId": "crs_chemistry_02",
+      "title": "2. Organic Reaction Mechanisms (SN1, SN2, E1, E2)",
+      "description": "Nucleophilic substitution and elimination pathways with stereochemistry inversion and carbocation stability.",
+      "contentType": "text",
+      "videoUrl": "",
+      "content": "## Nucleophilic Substitution Pathways\n- **$S_N1$ Mechanism**: Two-step reaction with carbocation intermediate (racemization).\n- **$S_N2$ Mechanism**: Concerted bimolecular backside attack with Walden inversion.\n",
+      "order": 2,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_chem_03",
+      "courseId": "crs_chemistry_02",
+      "title": "3. Chemical Kinetics, Rate Laws & Catalysis",
+      "description": "Reaction order, Arrhenius equation, activation energy barrier, and transition state theory.",
+      "contentType": "markdown",
+      "videoUrl": "",
+      "content": "## Arrhenius Equation & Activation Energy\n$$k = A e^{-\\frac{E_a}{RT}}$$\n\nCatalysts provide an alternative reaction mechanism with lower activation energy $E_a$, accelerating reaction rate without being consumed.\n",
+      "order": 3,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_math_01",
+      "courseId": "crs_math_03",
+      "title": "1. Multivariable Calculus & Gradient Vectors",
+      "description": "Partial derivatives, directional derivatives, the gradient operator $\\nabla$, and Lagrange multipliers for optimization.",
+      "contentType": "video",
+      "videoUrl": "https://www.youtube.com/embed/ZjAqacIC_3c",
+      "content": "## Vector Calculus & Gradients\nThe gradient points in the direction of greatest rate of increase of a scalar function:\n$$\\nabla f(x, y, z) = \\left( \\frac{\\partial f}{\\partial x}, \\frac{\\partial f}{\\partial y}, \\frac{\\partial f}{\\partial z} \\right)$$\n",
+      "order": 1,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_math_02",
+      "courseId": "crs_math_03",
+      "title": "2. Linear Algebra: Vector Spaces, Eigenvalues & SVD",
+      "description": "Matrices as linear transformations, determinants, characteristic polynomials, and Singular Value Decomposition.",
+      "contentType": "text",
+      "videoUrl": "",
+      "content": "## Eigenvalues & Eigenvectors\nFor a square matrix $A$, a non-zero vector $v$ satisfies:\n$$A v = \\lambda v$$\nwhere $\\lambda$ is the eigenvalue.\n",
+      "order": 2,
+      "durationMinutes": 35
+    },
+    {
+      "id": "lsn_math_03",
+      "courseId": "crs_math_03",
+      "title": "3. Discrete Mathematics, Graph Theory & Combinatorics",
+      "description": "Propositional logic, mathematical induction, Eulerian/Hamiltonian graphs, and recurrence relations.",
+      "contentType": "markdown",
+      "videoUrl": "",
+      "content": "## Graph Theory Essentials\nA Graph $G = (V, E)$ consists of vertices $V$ and edges $E$.\nHandshaking Lemma: $\\sum_{v \\in V} \\text{deg}(v) = 2|E|$.\n",
+      "order": 3,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_ict_01",
+      "courseId": "crs_ict_04",
+      "title": "1. Computer Architecture & Binary Number Systems",
+      "description": "Von Neumann architecture, CPU fetch-decode-execute cycle, binary/hex conversion, and Boolean logic gates.",
+      "contentType": "video",
+      "videoUrl": "https://www.youtube.com/embed/ZjAqacIC_3c",
+      "content": "## Digital Logic & Binary Systems\nAll modern computers process information as bits ($0$ and $1$).\nBasic Logic Gates: AND, OR, NOT, NAND, NOR, XOR.\n",
+      "order": 1,
+      "durationMinutes": 25
+    },
+    {
+      "id": "lsn_ict_02",
+      "courseId": "crs_ict_04",
+      "title": "2. Networking Models: OSI 7-Layer & TCP/IP Protocol",
+      "description": "Packet transmission, IP addressing, DNS routing, HTTP/HTTPS encryption, and firewalls.",
+      "contentType": "text",
+      "videoUrl": "",
+      "content": "## OSI 7-Layer Hierarchy\n1. Physical, 2. Data Link, 3. Network (IP), 4. Transport (TCP/UDP), 5. Session, 6. Presentation, 7. Application (HTTP).\n",
+      "order": 2,
+      "durationMinutes": 25
+    },
+    {
+      "id": "lsn_ict_03",
+      "courseId": "crs_ict_04",
+      "title": "3. Database Fundamentals & Cybersecurity Essentials",
+      "description": "Relational schema design (SQL), normalization, authentication tokens, and threat mitigation against malware.",
+      "contentType": "markdown",
+      "videoUrl": "",
+      "content": "## Data Security & Management\nRelational databases enforce ACID properties (Atomicity, Consistency, Isolation, Durability).\n",
+      "order": 3,
+      "durationMinutes": 25
+    },
+    {
+      "id": "lsn_prog_01",
+      "courseId": "crs_programming_05",
+      "title": "1. C++ Pointers, References & Memory Management",
+      "description": "Stack vs heap memory allocation, raw pointers, smart pointers (unique_ptr, shared_ptr), and RAII idiom.",
+      "contentType": "video",
+      "videoUrl": "https://www.youtube.com/embed/ZjAqacIC_3c",
+      "content": "## C++ Memory Model & Pointers\n```cpp\n#include <iostream>\n#include <memory>\n\nint main() {\n    // Modern C++ Smart Pointer (Zero leak guarantee)\n    std::unique_ptr<int> ptr = std::make_unique<int>(42);\n    std::cout << \"Value: \" << *ptr << std::endl;\n    return 0;\n}\n```\n",
+      "order": 1,
+      "durationMinutes": 35
+    },
+    {
+      "id": "lsn_prog_02",
+      "courseId": "crs_programming_05",
+      "title": "2. Python Idiomatic Code & Data Structures",
+      "description": "List comprehensions, generators, dictionaries, decorators, and Big-O computational time complexity.",
+      "contentType": "text",
+      "videoUrl": "",
+      "content": "## Pythonic Code Patterns\n```python\n# Generator expression for memory-efficient iteration\nsquares = (x**2 for x in range(1000) if x % 2 == 0)\nprint(next(squares))\n```\n",
+      "order": 2,
+      "durationMinutes": 35
+    },
+    {
+      "id": "lsn_prog_03",
+      "courseId": "crs_programming_05",
+      "title": "3. Algorithmic Problem Solving: Trees, Graphs & Dynamic Programming",
+      "description": "Binary search, DFS/BFS traversals, Dijkstra shortest path, and memoization techniques.",
+      "contentType": "markdown",
+      "videoUrl": "",
+      "content": "## Dynamic Programming Principles\n1. Optimal Substructure\n2. Overlapping Subproblems\n",
+      "order": 3,
+      "durationMinutes": 35
+    },
+    {
+      "id": "lsn_fs_01",
+      "courseId": "crs_fullstack_06",
+      "title": "1. Next.js 15 App Router & React Server Components",
+      "description": "Server components vs client components, layouts, nested routes, and streaming rendering.",
+      "contentType": "video",
+      "videoUrl": "https://www.youtube.com/embed/ZjAqacIC_3c",
+      "content": "## Next.js Server Components\nZero JavaScript bundle sent to the client for non-interactive views.\n",
+      "order": 1,
+      "durationMinutes": 40
+    },
+    {
+      "id": "lsn_fs_02",
+      "courseId": "crs_fullstack_06",
+      "title": "2. Server Actions, RESTful APIs & Data Mutations",
+      "description": "Mutating database state directly with type-safe server actions, input validation, and optimistic updates.",
+      "contentType": "text",
+      "videoUrl": "",
+      "content": "## Server Actions Paradigm\n```typescript\n'use server';\n\nexport async function createCourseAction(formData: FormData) {\n  // 🇧🇩 সার্ভার সাইডে ডাটাবেস সেভ ও ভ্যালিডেশন\n}\n```\n",
+      "order": 2,
+      "durationMinutes": 40
+    },
+    {
+      "id": "lsn_fs_03",
+      "courseId": "crs_fullstack_06",
+      "title": "3. Fullstack Authentication, RBAC & Cloud Deployment",
+      "description": "JWT token verification, session lifecycle, role-based route gating, Docker containerization, and production deployment.",
+      "contentType": "markdown",
+      "videoUrl": "",
+      "content": "## Production Architecture\nEnforce role access checks at middleware boundaries and backend API routes.\n",
+      "order": 3,
+      "durationMinutes": 40
+    },
+    {
+      "id": "lsn_dp_01",
+      "courseId": "crs_design_patterns_07",
+      "title": "1. Creational & Structural Patterns: Factory, Singleton & Adapter",
+      "description": "Object creation patterns and structural composition for loosely coupled TypeScript architectures.",
+      "contentType": "video",
+      "videoUrl": "https://www.youtube.com/embed/ZjAqacIC_3c",
+      "content": "## Creational Patterns\n- **Singleton Pattern**: Guarantees a single instance (used in our DatabaseRepository).\n- **Factory Pattern**: Encapsulates object instantiation logic.\n",
+      "order": 1,
+      "durationMinutes": 25
+    },
+    {
+      "id": "lsn_dp_02",
+      "courseId": "crs_design_patterns_07",
+      "title": "2. Behavioral Patterns: Strategy, Observer & Repository Pattern",
+      "description": "Implementing Strategy Pattern for auto-graders and Repository Pattern for data access separation.",
+      "contentType": "text",
+      "videoUrl": "",
+      "content": "## Repository & Strategy Patterns in Action\n```typescript\n// 🇧🇩 রিপোজিটরি ইন্টারফেস\nexport interface IRepository<T> {\n  findById(id: string): T | undefined;\n  create(item: T): T;\n}\n```\n",
+      "order": 2,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_dp_03",
+      "courseId": "crs_design_patterns_07",
+      "title": "3. SOLID Principles & Clean Architecture",
+      "description": "Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.",
+      "contentType": "markdown",
+      "videoUrl": "",
+      "content": "## The SOLID Principles\n- **S**: Single Responsibility Principle\n- **O**: Open/Closed Principle\n- **L**: Liskov Substitution Principle\n- **I**: Interface Segregation Principle\n- **D**: Dependency Inversion Principle\n",
+      "order": 3,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_sm_01",
+      "courseId": "crs_software_metrics_08",
+      "title": "1. Cyclomatic Complexity & Code Maintainability Index",
+      "description": "Calculate McCabe’s cyclomatic complexity ($M = E - N + 2P$) and refactor deeply nested conditionals.",
+      "contentType": "video",
+      "videoUrl": "https://www.youtube.com/embed/ZjAqacIC_3c",
+      "content": "## McCabe's Cyclomatic Complexity\nMeasures the number of linearly independent paths through a program’s source code.\n$$M = E - N + 2P$$\nWhere $E$ = edges, $N$ = nodes, and $P$ = connected components.\n",
+      "order": 1,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_sm_02",
+      "courseId": "crs_software_metrics_08",
+      "title": "2. Code Coverage, Halstead Metrics & Technical Debt",
+      "description": "Statement, branch, and mutation coverage; measuring vocabulary, length, and technical debt interest.",
+      "contentType": "text",
+      "videoUrl": "",
+      "content": "## Code Coverage vs Quality\nHigh line coverage alone does not guarantee robustness; branch and mutation testing ensure edge case safety.\n",
+      "order": 2,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_sm_03",
+      "courseId": "crs_software_metrics_08",
+      "title": "3. Automated Quality Gates in CI/CD Pipelines",
+      "description": "Enforcing ESLint rules, SonarQube quality thresholds, unit test pass rates, and security vulnerability scans.",
+      "contentType": "markdown",
+      "videoUrl": "",
+      "content": "## Quality Gates\nAutomatically reject pull requests that exceed complexity thresholds or drop test coverage below minimum standards.\n",
+      "order": 3,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_elec_01",
+      "courseId": "crs_electronics_09",
+      "title": "1. Semiconductor Physics & PN Junction Diodes",
+      "description": "Intrinsic and extrinsic semiconductors, band gap theory, diode IV characteristics, rectifiers, and Zener diodes.",
+      "contentType": "video",
+      "videoUrl": "https://www.youtube.com/embed/ZjAqacIC_3c",
+      "content": "## PN Junction Diode Equation\nShockley diode equation:\n$$I = I_s \\left( e^{\\frac{V_D}{\\eta V_T}} - 1 \\right)$$\n",
+      "order": 1,
+      "durationMinutes": 25
+    },
+    {
+      "id": "lsn_elec_02",
+      "courseId": "crs_electronics_09",
+      "title": "2. BJT and MOSFET Transistors as Switches & Amplifiers",
+      "description": "BJT active/saturation modes, MOSFET channel modulation, common-emitter and common-source amplifier topologies.",
+      "contentType": "text",
+      "videoUrl": "",
+      "content": "## Transistor Biasing & Small Signal Gain\nTransistors operate as current-controlled (BJT) or voltage-controlled (MOSFET) valves.\n",
+      "order": 2,
+      "durationMinutes": 25
+    },
+    {
+      "id": "lsn_elec_03",
+      "courseId": "crs_electronics_09",
+      "title": "3. Operational Amplifiers (Op-Amps) & Analog Signal Processing",
+      "description": "Ideal Op-Amp rules, inverting/non-inverting amplifiers, summing amplifiers, integrators, and comparators.",
+      "contentType": "markdown",
+      "videoUrl": "",
+      "content": "## Golden Rules of Ideal Op-Amps\n1. No current flows into either input terminal: $I_+ = I_- = 0$.\n2. Negative feedback drives the differential voltage to zero: $V_+ = V_-$.\n",
+      "order": 3,
+      "durationMinutes": 30
+    },
+    {
+      "id": "lsn_cir_01",
+      "courseId": "crs_circuits_10",
+      "title": "1. Ohm’s Law & Kirchhoff’s Laws (KCL / KVL)",
+      "description": "Conservation of charge and energy in circuits, node voltages, loop currents, and resistor combinations.",
+      "contentType": "video",
+      "videoUrl": "https://www.youtube.com/embed/ZjAqacIC_3c",
+      "content": "## Kirchhoff's Laws\n- **Kirchhoff's Current Law (KCL)**: $\\sum I_{in} = \\sum I_{out}$ (conservation of charge)\n- **Kirchhoff's Voltage Law (KVL)**: $\\sum V_{loop} = 0$ (conservation of energy)\n",
+      "order": 1,
+      "durationMinutes": 25
+    },
+    {
+      "id": "lsn_cir_02",
+      "courseId": "crs_circuits_10",
+      "title": "2. Network Theorems: Thevenin, Norton & Maximum Power Transfer",
+      "description": "Equivalence transformations, open-circuit voltage, short-circuit current, and load matching.",
+      "contentType": "text",
+      "videoUrl": "",
+      "content": "## Thevenin Theorem\nAny linear two-terminal circuit can be replaced by an equivalent voltage source $V_{th}$ in series with $R_{th}$.\n",
+      "order": 2,
+      "durationMinutes": 25
+    },
+    {
+      "id": "lsn_cir_03",
+      "courseId": "crs_circuits_10",
+      "title": "3. AC Sinusoidal Analysis, Phasors & RLC Resonance",
+      "description": "Impedance of capacitors and inductors ($Z_C, Z_L$), phasor diagrams, power factor, and series/parallel resonance.",
+      "contentType": "markdown",
+      "videoUrl": "",
+      "content": "## AC Impedance & Resonant Frequency\n- Capacitor Impedance: $Z_C = \\frac{1}{j\\omega C}$\n- Inductor Impedance: $Z_L = j\\omega L$\n- Resonant Frequency: $\\omega_0 = \\frac{1}{\\sqrt{LC}}$\n",
+      "order": 3,
+      "durationMinutes": 25
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "qiz_phy_01",
+      "courseId": "crs_physics_01",
+      "title": "Physics & Classical Mechanics Evaluation Quiz",
+      "description": "Assess your understanding of Newton’s Laws, conservation of energy, and wave properties.",
+      "passingPercentage": 70,
+      "timeLimitMinutes": 15,
+      "createdAt": "2026-08-20T10:00:00.000Z",
+      "createdBy": "usr_inst_01",
+      "questions": [
+        {
+          "id": "pq1",
+          "question": "According to Newton’s Second Law, if net force on an object is doubled while its mass is halved, what happens to acceleration?",
+          "points": 10,
+          "options": [
+            {
+              "id": "popt_1a",
+              "text": "Acceleration remains unchanged."
+            },
+            {
+              "id": "popt_1b",
+              "text": "Acceleration becomes four times larger (4x)."
+            },
+            {
+              "id": "popt_1c",
+              "text": "Acceleration is halved."
+            },
+            {
+              "id": "popt_1d",
+              "text": "Acceleration becomes zero."
+            }
+          ],
+          "correctOptionId": "popt_1b",
+          "explanation": "a = F / m. If F is doubled (2F) and m is halved (m/2), new acceleration is (2F)/(m/2) = 4(F/m) = 4a."
+        },
+        {
+          "id": "pq2",
+          "question": "What is the phenomenon responsible for light bending when entering a medium of different optical density?",
+          "points": 10,
+          "options": [
+            {
+              "id": "popt_2a",
+              "text": "Refraction"
+            },
+            {
+              "id": "popt_2b",
+              "text": "Total Internal Reflection"
+            },
+            {
+              "id": "popt_2c",
+              "text": "Polarization"
+            },
+            {
+              "id": "popt_2d",
+              "text": "Doppler Effect"
+            }
+          ],
+          "correctOptionId": "popt_2a",
+          "explanation": "Refraction occurs when light changes speed across different optical media, governed by Snell’s Law."
+        }
+      ]
+    },
+    {
+      "id": "qiz_fs_06",
+      "courseId": "crs_fullstack_06",
+      "title": "Full Stack Web Architecture & RBAC Evaluation Quiz",
+      "description": "Test your understanding of React Server Components, Role-Based Access Control, and progress state.",
+      "passingPercentage": 70,
+      "timeLimitMinutes": 15,
+      "createdAt": "2026-08-20T10:00:00.000Z",
+      "createdBy": "usr_inst_01",
+      "questions": [
+        {
+          "id": "fsq1",
+          "question": "What is the primary advantage of React Server Components (RSC)?",
+          "points": 10,
+          "options": [
+            {
+              "id": "fsopt_1a",
+              "text": "They execute on the server and send zero client-side JavaScript for those components."
+            },
+            {
+              "id": "fsopt_1b",
+              "text": "They permanently disable CSS stylesheets."
+            },
+            {
+              "id": "fsopt_1c",
+              "text": "They can only run on mobile devices."
+            },
+            {
+              "id": "fsopt_1d",
+              "text": "They require jQuery plugins."
+            }
+          ],
+          "correctOptionId": "fsopt_1a",
+          "explanation": "React Server Components render on the server, significantly reducing client JavaScript bundle size."
+        },
+        {
+          "id": "fsq2",
+          "question": "Why must Role-Based Access Control (RBAC) be validated on backend routes rather than only hiding UI buttons?",
+          "points": 10,
+          "options": [
+            {
+              "id": "fsopt_2a",
+              "text": "Hiding buttons is enough for security."
+            },
+            {
+              "id": "fsopt_2b",
+              "text": "Because unauthorized users can craft direct HTTP requests to restricted endpoints."
+            },
+            {
+              "id": "fsopt_2c",
+              "text": "Because browsers cannot hide buttons."
+            },
+            {
+              "id": "fsopt_2d",
+              "text": "To improve database backup speed."
+            }
+          ],
+          "correctOptionId": "fsopt_2b",
+          "explanation": "Frontend visibility checks are purely cosmetic; true security requires the server to validate roles on every incoming request."
+        }
+      ]
+    },
+    {
+      "id": "qiz_dp_07",
+      "courseId": "crs_design_patterns_07",
+      "title": "Design Patterns & SOLID Principles Quiz",
+      "description": "Assess your ability to select appropriate design patterns for clean, decoupled architectures.",
+      "passingPercentage": 70,
+      "timeLimitMinutes": 15,
+      "createdAt": "2026-08-21T10:00:00.000Z",
+      "createdBy": "usr_inst_01",
+      "questions": [
+        {
+          "id": "dpq1",
+          "question": "Which design pattern is used to decouple data access logic from business rules in our LMS architecture?",
+          "points": 10,
+          "options": [
+            {
+              "id": "dpopt_1a",
+              "text": "Repository Pattern"
+            },
+            {
+              "id": "dpopt_1b",
+              "text": "Flyweight Pattern"
+            },
+            {
+              "id": "dpopt_1c",
+              "text": "Interpreter Pattern"
+            },
+            {
+              "id": "dpopt_1d",
+              "text": "Prototype Pattern"
+            }
+          ],
+          "correctOptionId": "dpopt_1a",
+          "explanation": "The Repository Pattern encapsulates data access queries behind standard domain interfaces."
+        }
+      ]
+    },
+    {
+      "id": "qiz_cir_10",
+      "courseId": "crs_circuits_10",
+      "title": "Electric Circuits & Kirchhoff’s Laws Quiz",
+      "description": "Verify your mastery of circuit analysis, Ohm’s Law, and network theorems.",
+      "passingPercentage": 70,
+      "timeLimitMinutes": 10,
+      "createdAt": "2026-08-24T10:00:00.000Z",
+      "createdBy": "usr_admin_01",
+      "questions": [
+        {
+          "id": "cq1",
+          "question": "What fundamental law of physics is Kirchhoff’s Current Law (KCL) based on?",
+          "points": 10,
+          "options": [
+            {
+              "id": "copt_1a",
+              "text": "Conservation of electric charge"
+            },
+            {
+              "id": "copt_1b",
+              "text": "Conservation of momentum"
+            },
+            {
+              "id": "copt_1c",
+              "text": "Newton’s third law"
+            },
+            {
+              "id": "copt_1d",
+              "text": "Faraday’s law of induction"
+            }
+          ],
+          "correctOptionId": "copt_1a",
+          "explanation": "KCL states that total current entering a junction must equal total current leaving it, conserving charge."
+        }
+      ]
+    }
+  ],
+  "submissions": [
+    {
+      "id": "sub_demo_01",
+      "quizId": "qiz_fs_06",
+      "courseId": "crs_fullstack_06",
+      "studentId": "usr_stud_01",
+      "studentName": "Shakib Al Hasan",
+      "answers": {
+        "fsq1": "fsopt_1a",
+        "fsq2": "fsopt_2b"
+      },
+      "score": 20,
+      "totalPoints": 20,
+      "percentage": 100,
+      "isPassed": true,
+      "submittedAt": "2026-08-24T14:30:00.000Z"
+    }
+  ],
+  "enrollments": [
+    {
+      "id": "enr_01",
+      "studentId": "usr_stud_01",
+      "courseId": "crs_physics_01",
+      "enrolledAt": "2026-08-20T09:00:00.000Z",
+      "lastAccessedAt": "2026-08-25T11:00:00.000Z"
+    },
+    {
+      "id": "enr_02",
+      "studentId": "usr_stud_01",
+      "courseId": "crs_fullstack_06",
+      "enrolledAt": "2026-08-21T10:00:00.000Z",
+      "lastAccessedAt": "2026-08-25T15:00:00.000Z"
+    },
+    {
+      "id": "enr_03",
+      "studentId": "usr_stud_02",
+      "courseId": "crs_math_03",
+      "enrolledAt": "2026-08-22T11:00:00.000Z",
+      "lastAccessedAt": "2026-08-25T12:00:00.000Z"
+    }
+  ],
+  "progress": [
+    {
+      "id": "prog_01",
+      "studentId": "usr_stud_01",
+      "courseId": "crs_physics_01",
+      "completedLessonIds": [
+        "lsn_phy_01",
+        "lsn_phy_02"
+      ],
+      "totalLessons": 3,
+      "completedLessonsCount": 2,
+      "progressPercentage": 66.67,
+      "isCompleted": false,
+      "lastActiveLessonId": "lsn_phy_02",
+      "updatedAt": "2026-08-25T11:00:00.000Z"
+    },
+    {
+      "id": "prog_02",
+      "studentId": "usr_stud_01",
+      "courseId": "crs_fullstack_06",
+      "completedLessonIds": [
+        "lsn_fs_01",
+        "lsn_fs_02",
+        "lsn_fs_03"
+      ],
+      "totalLessons": 3,
+      "completedLessonsCount": 3,
+      "progressPercentage": 100,
+      "isCompleted": true,
+      "lastActiveLessonId": "lsn_fs_03",
+      "updatedAt": "2026-08-25T15:00:00.000Z"
+    },
+    {
+      "id": "prog_03",
+      "studentId": "usr_stud_02",
+      "courseId": "crs_math_03",
+      "completedLessonIds": [
+        "lsn_math_01"
+      ],
+      "totalLessons": 3,
+      "completedLessonsCount": 1,
+      "progressPercentage": 33.33,
+      "isCompleted": false,
+      "lastActiveLessonId": "lsn_math_01",
+      "updatedAt": "2026-08-25T12:00:00.000Z"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "blg_01",
+      "title": "Architecting Scalable Next.js 15 Applications with Headless Strapi v5",
+      "slug": "architecting-scalable-nextjs-strapi",
+      "excerpt": "A comprehensive engineering guide on building resilient enterprise applications using React Server Components, typed APIs, and strict RBAC.",
+      "content": "### Introduction\nWhen architecting modern web platforms, separating your presentation layer (Next.js) from your headless CMS (Strapi) provides unmatched scalability, security, and developer agility.\n\n### 1. The Power of React Server Components\nReact Server Components (RSC) fundamentally shift how frontend engineers think about data fetching:\n- Zero JavaScript overhead for static and server-rendered blocks\n- Direct backend communication without exposing secret CMS tokens to the browser\n- Native streaming support with Suspense boundaries\n\n### 2. Strict Role-Based Access Control (RBAC)\nNever rely exclusively on client UI state for security. Enforce access rules strictly on every backend route:\n```typescript\n// 🇧🇩 ব্যাকএন্ড পারমিশন চেক উদাহরণ\nexport function requireRole(allowedRoles: UserRole[]) {\n  return (req, res, next) => {\n    if (!allowedRoles.includes(req.user.role)) {\n      return res.status(403).json({ error: 'Forbidden: Insufficient privileges' });\n    }\n    next();\n  };\n}\n```\n\n### 3. Conclusion\nAdopting clean software design patterns like Repository and Strategy patterns ensures your LMS codebase remains maintainable as your team grows.\n",
+      "coverImageUrl": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format&fit=crop&q=80",
+      "authorId": "usr_cm_01",
+      "authorName": "Farhana Rahman",
+      "authorRole": "content_manager",
+      "status": "published",
+      "tags": [
+        "Engineering",
+        "Next.js",
+        "Strapi",
+        "Architecture"
+      ],
+      "readTimeMinutes": 6,
+      "publishedAt": "2026-08-21T09:00:00.000Z",
+      "createdAt": "2026-08-20T14:00:00.000Z",
+      "updatedAt": "2026-08-21T09:00:00.000Z"
+    },
+    {
+      "id": "blg_02",
+      "title": "How to Implement Zero-Leak Permission Matrices in Web Systems",
+      "slug": "zero-leak-permission-matrices",
+      "excerpt": "Deep dive into why role-based security fails at the boundary and how to implement airtight authorization layers.",
+      "content": "### Security at the Boundary\nRole-based systems frequently suffer from \"UI-only\" gating, where an attacker can simply trigger HTTP endpoints directly.\n\nIn this article, we explore:\n1. **Hierarchical vs Granular Permissions**\n2. **Resource Ownership Validation** (e.g. Instructors editing only their own course items)\n3. **Audit Logging** for administrative role promotions.\n",
+      "coverImageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=80",
+      "authorId": "usr_admin_01",
+      "authorName": "Tanvir Ahmed",
+      "authorRole": "admin",
+      "status": "published",
+      "tags": [
+        "Security",
+        "RBAC",
+        "Best Practices"
+      ],
+      "readTimeMinutes": 5,
+      "publishedAt": "2026-08-23T11:00:00.000Z",
+      "createdAt": "2026-08-22T16:00:00.000Z",
+      "updatedAt": "2026-08-23T11:00:00.000Z"
+    },
+    {
+      "id": "blg_03",
+      "title": "[Draft] Upcoming LMS 2.0 Features: Interactive Code Sandboxes & Certificates",
+      "slug": "upcoming-lms-2-features-draft",
+      "excerpt": "Preview of upcoming interactive coding playgrounds and verifiable blockchain certificate issuance.",
+      "content": "This is a draft preview article currently in editorial review by Content Managers and Administrators. Students cannot see this article until it is published!",
+      "coverImageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+      "authorId": "usr_cm_01",
+      "authorName": "Farhana Rahman",
+      "authorRole": "content_manager",
+      "status": "draft",
+      "tags": [
+        "Product Update",
+        "Roadmap"
+      ],
+      "readTimeMinutes": 4,
+      "createdAt": "2026-08-24T16:00:00.000Z",
+      "updatedAt": "2026-08-24T16:00:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log_01",
+      "userId": "usr_admin_01",
+      "userName": "Tanvir Ahmed",
+      "userRole": "admin",
+      "action": "SYSTEM_BOOTSTRAP",
+      "details": "Initialized LMS database with 4-tier RBAC security policy and sample courses.",
+      "timestamp": "2026-08-25T08:00:00.000Z"
+    }
+  ],
+  "sessions": []
+}
